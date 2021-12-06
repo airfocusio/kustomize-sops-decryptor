@@ -1,0 +1,47 @@
+apiVersion: config.kubernetes.io/v1
+kind: ResourceList
+items:
+  - apiVersion: v1
+    kind: Secret
+    metadata:
+        name: plain
+    stringData:
+        foo: bar
+  - apiVersion: v1
+    kind: Secret
+    metadata:
+        name: encrypted
+    stringData:
+        foo: ENC[AES256_GCM,data:Si5h,iv:XpfhSANgwIVroWvHHwcQwqKICOmfWYSmRvbnxfpC+ZE=,tag:Mg1mKS9X7XdyC31kD1NoKw==,type:str]
+    sops:
+        kms: []
+        gcp_kms: []
+        azure_kv: []
+        hc_vault: []
+        age:
+            - recipient: age1ks0a8wkcdt74jp9l2chgny8e2pnjqta7rdwam4ju4ceqervn5ulq26q0wf
+              enc: |
+                -----BEGIN AGE ENCRYPTED FILE-----
+                YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBLODc5NEFBMEJIN3lxOHJY
+                V3RUMzc5NVZVMDhHQkVDU3dQTzhUOWRoNVFRCm1xdkxscDhPSWJQa0Fhb25jazdy
+                VTY4OW0xaTF3aERBeUtWT1VFTzYwbmcKLS0tIHU5WXNRWXIwYmxMSG93eTAvZlYz
+                a0h3dVhiSGtxdzhjemZkRForamVFRFEKFYa74n9tj4InIXc6AQpD3n+miVdiNPvr
+                aoU5jScq2kI9heh7f1scpDl5bPJGKSfxJ5bpA+k7MpDeMDMfaCR5AA==
+                -----END AGE ENCRYPTED FILE-----
+        lastmodified: "2021-12-06T11:36:09Z"
+        mac: ENC[AES256_GCM,data:df+D4qaGTnOrsz3K9Cawd5TyQ2Q0/i01QhfykjtRoZXvPoIZE0Ni8EDKQgGs1WFr1cXXLt+NQdIv+cl3eg5trC3ErCZwOoJmD1bI6U0udkVr+2y9qghm4NOOIo9poxrMIt8WEXRbA4/TtFo/jTS0HpGN98d1vbEKyUbpGmAlVog=,iv:mzrXCUQzT2+U0A+azppyTxH6ABABLriGmeckw9LJ5Y0=,tag:zx+zoIdAwp6LMHziZWzdfA==,type:str]
+        pgp: []
+        encrypted_regex: ^(data|stringData)$
+        version: 3.7.1
+functionConfig:
+  kind: SopsDecryptor
+  metadata:
+    name: sops-decryptor
+    annotations:
+      config.kubernetes.io/function: |
+        container:
+          image: ghcr.io/choffmeister/kustomize-sops-transformer:latest
+      config.kubernetes.io/local-config: 'true'
+  age:
+    keys:
+      - AGE-SECRET-KEY-1ZG7DTP6CK848WNETJZU6LT83DD6EVR9SJ32Y3CT7EZEUP7YFH0NQE2HPA4

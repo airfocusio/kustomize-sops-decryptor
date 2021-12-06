@@ -1,0 +1,11 @@
+apiVersion: choffmeister.github.com/v1alpha1
+kind: SopsDecryptor
+metadata:
+  name: sops-decryptor
+  annotations:
+    config.kubernetes.io/function: |
+      container:
+        image: ghcr.io/choffmeister/kustomize-sops-transformer:latest
+age:
+  keys:
+    - AGE-SECRET-KEY-1ZG7DTP6CK848WNETJZU6LT83DD6EVR9SJ32Y3CT7EZEUP7YFH0NQE2HPA4
