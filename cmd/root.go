@@ -5,7 +5,7 @@ import (
 	"os"
 	"runtime/debug"
 
-	"github.com/choffmeister/kustomize-sops-transformer/internal"
+	"github.com/choffmeister/kustomize-sops-decryptor/internal"
 	"github.com/spf13/cobra"
 )
 
@@ -17,7 +17,7 @@ func newRootCmd(version FullVersion) *rootCmd {
 	result := &rootCmd{}
 	cmd := &cobra.Command{
 		Version:      version.Version,
-		Use:          "kustomize-sops-transformer",
+		Use:          "kustomize-sops-decryptor",
 		Short:        "An converter from helm charts to kustomizations",
 		SilenceUsage: true,
 		Run: func(cmd *cobra.Command, args []string) {

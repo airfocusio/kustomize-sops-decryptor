@@ -1,4 +1,4 @@
-module github.com/choffmeister/kustomize-sops-transformer
+module github.com/choffmeister/kustomize-sops-decryptor
 
 go 1.17
 

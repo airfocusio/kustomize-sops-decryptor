@@ -5,7 +5,7 @@ metadata:
   annotations:
     config.kubernetes.io/function: |
       container:
-        image: ghcr.io/choffmeister/kustomize-sops-transformer:latest
+        image: ghcr.io/choffmeister/kustomize-sops-decryptor:latest
 age:
   keys:
     - AGE-SECRET-KEY-1ZG7DTP6CK848WNETJZU6LT83DD6EVR9SJ32Y3CT7EZEUP7YFH0NQE2HPA4

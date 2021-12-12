@@ -1,5 +1,5 @@
 FROM alpine:latest as certs
 RUN apk add --update --no-cache ca-certificates
-COPY kustomize-sops-transformer /bin/kustomize-sops-transformer
-ENTRYPOINT ["/bin/kustomize-sops-transformer"]
+COPY kustomize-sops-decryptor /bin/kustomize-sops-decryptor
+ENTRYPOINT ["/bin/kustomize-sops-decryptor"]
 WORKDIR /workdir

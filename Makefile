@@ -22,8 +22,8 @@ build:
 
 build-docker:
 	goreleaser build --rm-dist --snapshot
-	cp Dockerfile dist/kustomize-sops-transformer_linux_amd64
-	docker build -t ghcr.io/choffmeister/kustomize-sops-transformer:latest dist/kustomize-sops-transformer_linux_amd64
+	cp Dockerfile dist/kustomize-sops-decryptor_linux_amd64
+	docker build -t ghcr.io/choffmeister/kustomize-sops-decryptor:latest dist/kustomize-sops-decryptor_linux_amd64
 
 release:
 	goreleaser release --rm-dist

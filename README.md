@@ -1,4 +1,4 @@
-# kustomize-sops-transformer
+# kustomize-sops-decryptor
 
 Plugin for [kustomize](https://kubectl.docs.kubernetes.io/installation/kustomize/) to allow on-the-fly decryption with [sops](https://github.com/mozilla/sops).
 
@@ -27,7 +27,7 @@ metadata:
   annotations:
     config.kubernetes.io/function: |
       container:
-        image: ghcr.io/choffmeister/kustomize-sops-transformer:latest
+        image: ghcr.io/choffmeister/kustomize-sops-decryptor:latest
 age:
   keys:
     - AGE-SECRET-KEY-...

@@ -40,7 +40,7 @@ functionConfig:
     annotations:
       config.kubernetes.io/function: |
         container:
-          image: ghcr.io/choffmeister/kustomize-sops-transformer:latest
+          image: ghcr.io/choffmeister/kustomize-sops-decryptor:latest
       config.kubernetes.io/local-config: 'true'
   age:
     keys:
