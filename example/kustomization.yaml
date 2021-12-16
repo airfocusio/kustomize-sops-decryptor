@@ -1,5 +1,4 @@
 resources:
-  - plain.yaml
-  - encrypted.yaml
+  - secret.enc.yaml
 transformers:
   - decryptor.yaml
