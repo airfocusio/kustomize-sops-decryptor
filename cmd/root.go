@@ -5,7 +5,7 @@ import (
 	"os"
 	"runtime/debug"
 
-	"github.com/choffmeister/kustomize-sops-decryptor/internal"
+	"github.com/airfocusio/kustomize-sops-decryptor/internal"
 	"github.com/spf13/cobra"
 )
 

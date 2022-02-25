@@ -27,7 +27,7 @@ metadata:
   annotations:
     config.kubernetes.io/function: |
       container:
-        image: ghcr.io/choffmeister/kustomize-sops-decryptor:latest
+        image: ghcr.io/airfocusio/kustomize-sops-decryptor:latest
 age:
   keys:
     - AGE-SECRET-KEY-...

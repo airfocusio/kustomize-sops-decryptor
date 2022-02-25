@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/choffmeister/kustomize-sops-decryptor/cmd"
+	"github.com/airfocusio/kustomize-sops-decryptor/cmd"
 )
 
 // nolint: gochecknoglobals

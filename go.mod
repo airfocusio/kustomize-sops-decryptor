@@ -1,4 +1,4 @@
-module github.com/choffmeister/kustomize-sops-decryptor
+module github.com/airfocusio/kustomize-sops-decryptor
 
 go 1.17
 
