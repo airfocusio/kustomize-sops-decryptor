@@ -36,7 +36,7 @@ func Run() error {
 func decrypt(config *Config) func(items []*yaml.RNode) ([]*yaml.RNode, error) {
 	return func(items []*yaml.RNode) ([]*yaml.RNode, error) {
 		if len(config.Age.Keys) == 0 {
-			return nil, fmt.Errorf("At least one key is needed")
+			return nil, fmt.Errorf("at least one key is needed")
 		}
 
 		identities := []age.Identity{}

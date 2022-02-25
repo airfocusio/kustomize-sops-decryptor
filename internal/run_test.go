@@ -71,7 +71,7 @@ stringData:
   foo: ENC[AES256_GCM,data:5Czb,iv:9pu0tjIJz5plxRZ0XAs1DJCZcO/vOdQWavPmrX1xOb8=,tag:/QYxcDIvpVKhHCltEAAtPA==,type:str]
 `,
 			label: "no-key",
-			error: fmt.Errorf("At least one key is needed"),
+			error: fmt.Errorf("at least one key is needed"),
 		},
 		{
 			config: Config{
