@@ -1,6 +1,6 @@
 module github.com/airfocusio/kustomize-sops-decryptor
 
-go 1.17
+go 1.19
 
 require (
 	filippo.io/age v1.0.0
