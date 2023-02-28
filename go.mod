@@ -5,7 +5,7 @@ go 1.19
 require (
 	filippo.io/age v1.1.1
 	github.com/spf13/cobra v1.6.1
-	github.com/stretchr/testify v1.8.1
+	github.com/stretchr/testify v1.8.2
 	go.mozilla.org/sops/v3 v3.7.3
 	golang.org/x/net v0.7.0
 	google.golang.org/grpc v1.53.0
