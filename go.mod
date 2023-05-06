@@ -9,7 +9,7 @@ require (
 	go.mozilla.org/sops/v3 v3.7.3
 	golang.org/x/net v0.9.0
 	google.golang.org/grpc v1.54.0
-	sigs.k8s.io/kustomize/kyaml v0.14.1
+	sigs.k8s.io/kustomize/kyaml v0.14.2
 )
 
 require (
