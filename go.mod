@@ -8,7 +8,7 @@ require (
 	github.com/stretchr/testify v1.8.2
 	go.mozilla.org/sops/v3 v3.7.3
 	golang.org/x/net v0.9.0
-	google.golang.org/grpc v1.54.0
+	google.golang.org/grpc v1.54.1
 	sigs.k8s.io/kustomize/kyaml v0.14.1
 )
 
